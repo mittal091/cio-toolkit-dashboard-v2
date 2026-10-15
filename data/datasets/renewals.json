@@ -1,0 +1,19 @@
+{
+  "id": "renewals",
+  "domain": "cost",
+  "columns": [
+    { "key": "contract", "label": "Contract" },
+    { "key": "notice", "label": "Notice by" },
+    { "key": "value", "label": "Value", "align": "right" },
+    { "key": "clause", "label": "Price clause" },
+    { "key": "status", "label": "Status", "type": "badge" }
+  ],
+  "rows": [
+    { "contract": "Observability platform", "notice": "15 Nov 2026", "value": "$1.9M", "clause": "Uplift 7%",
+      "status": { "text": "Notice closing", "tone": "amber" } },
+    { "contract": "ERP licences", "notice": "20 Dec 2026", "value": "$6.4M", "clause": "Uplift 9%",
+      "status": { "text": "Watch", "tone": "amber" } },
+    { "contract": "Collaboration suite", "notice": "30 Mar 2027", "value": "$2.2M", "clause": "Capped at CPI",
+      "status": { "text": "Normal", "tone": "green" } }
+  ]
+}

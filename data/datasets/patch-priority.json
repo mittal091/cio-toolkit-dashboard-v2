@@ -1,0 +1,19 @@
+{
+  "id": "patch-priority",
+  "domain": "security",
+  "columns": [
+    { "key": "rank", "label": "Rank" },
+    { "key": "asset", "label": "Asset" },
+    { "key": "exploit", "label": "Exploit known" },
+    { "key": "criticality", "label": "Criticality" },
+    { "key": "sla", "label": "SLA", "type": "badge" }
+  ],
+  "rows": [
+    { "rank": "1", "asset": "Payments gateway (internet-facing)", "exploit": "Yes", "criticality": "High",
+      "sla": { "text": "Breached", "tone": "red" } },
+    { "rank": "2", "asset": "Identity server", "exploit": "Yes", "criticality": "High",
+      "sla": { "text": "Due in 4 days", "tone": "amber" } },
+    { "rank": "3", "asset": "Reporting server", "exploit": "No", "criticality": "Medium",
+      "sla": { "text": "Within SLA", "tone": "green" } }
+  ]
+}

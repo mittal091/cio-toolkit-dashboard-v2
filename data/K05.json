@@ -1,0 +1,8 @@
+{
+  "kpi": "K05",
+  "domain": "cost",
+  "asOf": "2026-10-12",
+  "metrics": {
+    "itSpendPct": { "label": "IT spend % of revenue", "unit": "pct", "decimals": 1, "value": 3.4, "status": "neutral" }
+  }
+}

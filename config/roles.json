@@ -1,0 +1,27 @@
+{
+  "default": "cio",
+  "roles": [
+    { "id": "cio", "label": "CIO office" },
+    { "id": "finance", "label": "Finance, FinOps and Procurement" },
+    { "id": "ops", "label": "Operations and service owners" },
+    { "id": "delivery", "label": "PMO and Engineering" },
+    { "id": "security", "label": "CISO, Risk and Compliance" },
+    { "id": "ai", "label": "AI and Data lead" }
+  ],
+  "domains": {
+    "cio": ["cio"],
+    "cost": ["cio", "finance", "ai"],
+    "service": ["cio", "ops"],
+    "delivery": ["cio", "delivery"],
+    "security": ["cio", "security"],
+    "ai": ["cio", "ai", "finance"]
+  },
+  "domainLabels": {
+    "cio": "CIO office",
+    "cost": "Finance and FinOps",
+    "service": "Operations",
+    "delivery": "Delivery and Engineering",
+    "security": "Security and Risk",
+    "ai": "AI and Data"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "one-event",
+  "access": ["cio"],
+  "columns": [
+    { "key": "role", "label": "Role", "type": "link" },
+    { "key": "what", "label": "What happened" }
+  ],
+  "rows": [
+    { "role": { "text": "Operations", "view": "ops" },
+      "what": "MTTR rose from {{K17:mttr:at(7)}} to {{K17:mttr:at(8)}}; {{K17:incidents:at(8)}} incidents" },
+    { "role": { "text": "FinOps", "view": "fin" },
+      "what": "Cloud cost +{{K07:spikeW9}} ({{K07:weekly:at(7)}} to {{K07:weekly:at(8)}}), mostly Payments API" },
+    { "role": { "text": "Delivery", "view": "del" },
+      "what": "Payments Modernisation reported Green, but AI flags slippage risk" },
+    { "role": { "text": "Security", "view": "sec" },
+      "what": "3 new critical vulnerabilities on the same service" }
+  ]
+}

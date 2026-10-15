@@ -1,0 +1,21 @@
+{
+  "kpi": "K06",
+  "domain": "cost",
+  "asOf": "2026-10-12",
+  "series": {
+    "monthlyActual": {
+      "name": "Actual", "unit": "usd_m", "decimals": 1,
+      "labels": ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      "values": [9.8, 10.1, 10.2, 10.3, 10.3, 10.7]
+    },
+    "monthlyBudget": {
+      "name": "Budget", "unit": "usd_m", "decimals": 1,
+      "labels": ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      "values": [10, 10, 10, 10, 10, 10]
+    }
+  },
+  "metrics": {
+    "budgetYtd": { "label": "Budget vs actual", "unit": "pct", "decimals": 1, "signed": true,
+      "value": { "derive": "pctVs", "series": "monthlyActual", "base": "monthlyBudget" }, "status": "warn" }
+  }
+}

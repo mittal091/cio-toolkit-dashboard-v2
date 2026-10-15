@@ -1,0 +1,21 @@
+{
+  "id": "project-health",
+  "domain": "delivery",
+  "columns": [
+    { "key": "project", "label": "Project" },
+    { "key": "reported", "label": "Reported", "type": "badge" },
+    { "key": "reports", "label": "What the reports say" },
+    { "key": "risk", "label": "Risk", "type": "badge" }
+  ],
+  "rows": [
+    { "project": "Payments Modernisation", "reported": { "text": "Green", "tone": "green" },
+      "reports": "Delays in test and vendor delivery, 3 reports in a row",
+      "risk": { "text": "High", "tone": "amber" }, "flagged": true },
+    { "project": "Data Platform Phase 2", "reported": { "text": "Green", "tone": "green" },
+      "reports": "One milestone moved twice",
+      "risk": { "text": "Medium", "tone": "amber" }, "flagged": true },
+    { "project": "HR Self-Service", "reported": { "text": "Green", "tone": "green" },
+      "reports": "No delay mentioned",
+      "risk": { "text": "Low", "tone": "green" }, "flagged": false }
+  ]
+}

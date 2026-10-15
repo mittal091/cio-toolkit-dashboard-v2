@@ -1,0 +1,14 @@
+{
+  "kpi": "K16",
+  "domain": "service",
+  "asOf": "2026-10-12",
+  "metrics": {
+    "target": { "label": "Availability target", "unit": "pct", "decimals": 2, "value": 99.95, "status": "neutral" },
+    "paymentsAvailability": { "label": "Payments availability", "unit": "pct", "decimals": 2,
+      "value": { "derive": "lookup", "dataset": "availability", "matchKey": "service", "match": "Payments", "key": "value" },
+      "status": "bad" },
+    "servicesMeetingSla": { "label": "Critical services meeting SLA", "unit": "text",
+      "value": { "derive": "countMeeting", "dataset": "availability", "key": "value", "op": "gte", "targetMetric": "target" },
+      "status": "bad" }
+  }
+}

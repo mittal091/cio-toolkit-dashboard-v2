@@ -1,0 +1,18 @@
+[
+  { "id": "K01", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K03", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K05", "aiValue": "None", "mvp": true, "partial": true },
+  { "id": "K06", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K07", "aiValue": "High", "mvp": true, "partial": true },
+  { "id": "K09", "aiValue": "High", "mvp": true, "partial": true },
+  { "id": "K11", "aiValue": "None", "mvp": true, "partial": true },
+  { "id": "K14", "aiValue": "High", "mvp": true, "partial": true },
+  { "id": "K16", "aiValue": "Low", "mvp": true, "partial": true },
+  { "id": "K17", "aiValue": "High", "mvp": true, "partial": true },
+  { "id": "K20", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K21", "aiValue": "None", "mvp": true, "partial": true },
+  { "id": "K24", "aiValue": "High", "mvp": true, "partial": true },
+  { "id": "K31", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K32", "aiValue": "Medium", "mvp": true, "partial": true },
+  { "id": "K35", "aiValue": "Medium", "mvp": false, "partial": true }
+]

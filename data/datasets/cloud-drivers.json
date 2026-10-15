@@ -1,0 +1,12 @@
+{
+  "id": "cloud-drivers",
+  "domain": "cost",
+  "columns": [
+    { "key": "driver", "label": "Driver" },
+    { "key": "change", "label": "Change", "align": "right" }
+  ],
+  "rows": [
+    { "driver": "Payments API compute, scaling rule changed in R-214", "change": "+$61k" },
+    { "driver": "Data lake storage", "change": "+$12k" }
+  ]
+}

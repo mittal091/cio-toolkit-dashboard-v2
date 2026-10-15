@@ -1,0 +1,29 @@
+{
+  "kpi": "K17",
+  "domain": "service",
+  "asOf": "2026-10-12",
+  "series": {
+    "incidents": {
+      "name": "Incidents", "unit": "count",
+      "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"],
+      "values": [9, 11, 8, 10, 9, 12, 10, 11, 19, 15, 13, 14]
+    },
+    "mttr": {
+      "name": "MTTR", "unit": "hours",
+      "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"],
+      "values": [2.6, 2.8, 2.5, 2.7, 2.4, 2.9, 2.6, 2.8, 4.6, 4.1, 3.4, 3.1]
+    }
+  },
+  "markers": [
+    { "series": "incidents", "index": 8, "text": "Release R-214" },
+    { "series": "mttr", "index": 8, "text": "Release R-214" }
+  ],
+  "metrics": {
+    "incidentsW12": { "label": "P1/P2 incidents, W12", "unit": "count",
+      "value": { "derive": "last", "series": "incidents" }, "status": "warn" },
+    "mttrW12": { "label": "MTTR, W12", "unit": "hours",
+      "value": { "derive": "last", "series": "mttr" }, "status": "good" },
+    "clusters": { "label": "Repeat-incident clusters", "unit": "count",
+      "value": { "derive": "rowCount", "dataset": "repeat-incidents" }, "status": "neutral" }
+  }
+}

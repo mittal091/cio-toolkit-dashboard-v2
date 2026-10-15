@@ -1,0 +1,15 @@
+{
+  "id": "availability",
+  "domain": "service",
+  "columns": [
+    { "key": "service", "label": "Service" },
+    { "key": "value", "label": "Availability %", "align": "right" },
+    { "key": "tone", "label": "Tone" }
+  ],
+  "rows": [
+    { "service": "Payments", "value": 99.88, "tone": "red" },
+    { "service": "Customer portal", "value": 99.94, "tone": "amber" },
+    { "service": "Core ERP", "value": 99.97, "tone": "green" },
+    { "service": "Email", "value": 99.99, "tone": "green" }
+  ]
+}

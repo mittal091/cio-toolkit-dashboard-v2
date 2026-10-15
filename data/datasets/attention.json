@@ -1,0 +1,21 @@
+{
+  "id": "attention",
+  "access": ["cio"],
+  "columns": [
+    { "key": "item", "label": "Item", "type": "badge_text" },
+    { "key": "owner", "label": "Owner" },
+    { "key": "step", "label": "First step" }
+  ],
+  "rows": [
+    { "item": { "tone": "red", "badge": "Critical", "text": "Payments gateway vulnerability, patch SLA breached" },
+      "owner": "CISO", "step": "Confirm patch window this week" },
+    { "item": { "tone": "red", "badge": "Critical", "text": "Payments availability {{K16:paymentsAvailability}}, target {{K16:target}}" },
+      "owner": "Operations", "step": "Review release R-214 fix" },
+    { "item": { "tone": "amber", "badge": "Soon", "text": "Observability contract notice closes 15 Nov" },
+      "owner": "Procurement", "step": "Legal to check price clause" },
+    { "item": { "tone": "amber", "badge": "Soon", "text": "Payments Modernisation reported Green, flagged at risk" },
+      "owner": "PMO", "step": "PM to confirm recovery plan" },
+    { "item": { "tone": "amber", "badge": "Soon", "text": "Cloud cost still {{K07:vsW8}} above W8" },
+      "owner": "Cloud / FinOps lead", "step": "Review scaling rule" }
+  ]
+}

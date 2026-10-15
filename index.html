@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIO Toolkit Role Views</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="eyebrow">CIO Toolkit</div>
+    <div class="rolebar"><label for="role">Viewing as</label><select id="role"></select></div>
+  </div>
+  <h1>CIO Dashboard: one cockpit, role-based views</h1>
+  <p class="lede">Pick a role to see its view. Ask a question to get an answer with sources.</p>
+
+  <div class="steps">
+    <div class="step on">1 Inform <small>MVP demo</small></div>
+    <div class="step">2 Explain <small>Next phase</small></div>
+    <div class="step">3 Act <small>Next phase</small></div>
+  </div>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="view"></div>
+
+  <div class="foot">Illustrative data shown throughout for demonstration purposes.</div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

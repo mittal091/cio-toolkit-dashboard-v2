@@ -1,0 +1,19 @@
+{
+  "kpi": "K32",
+  "domain": "ai",
+  "asOf": "2026-10-12",
+  "values": {
+    "users": { "previous": 1137, "current": 1240 },
+    "benefit": { "measured": 2, "live": 6 }
+  },
+  "metrics": {
+    "activeUsers": { "label": "Active AI users", "unit": "count",
+      "value": { "derive": "pick", "values": "users", "key": "current" }, "status": "good" },
+    "growth": { "label": "Active users, 4-week change", "unit": "pct", "decimals": 0, "signed": true,
+      "value": { "derive": "pctChangeBetween", "values": "users", "from": "previous", "to": "current" }, "status": "good" },
+    "growthPct": { "label": "Active users, 4-week growth", "unit": "pct", "decimals": 0,
+      "value": { "derive": "pctChangeBetween", "values": "users", "from": "previous", "to": "current" }, "status": "good" },
+    "measuredBenefit": { "label": "Measured benefit", "unit": "text",
+      "value": { "derive": "ofText", "values": "benefit", "a": "measured", "b": "live" }, "status": "warn" }
+  }
+}

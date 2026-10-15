@@ -1,0 +1,8 @@
+{
+  "kpi": "K21",
+  "domain": "security",
+  "asOf": "2026-10-12",
+  "metrics": {
+    "mfa": { "label": "MFA and privileged coverage", "unit": "pct", "decimals": 0, "value": 96, "status": "neutral" }
+  }
+}

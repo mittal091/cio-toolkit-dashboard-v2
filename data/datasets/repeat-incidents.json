@@ -1,0 +1,14 @@
+{
+  "id": "repeat-incidents",
+  "domain": "service",
+  "columns": [
+    { "key": "cluster", "label": "Cluster" },
+    { "key": "tickets", "label": "Tickets", "align": "right" },
+    { "key": "link", "label": "Likely link" }
+  ],
+  "rows": [
+    { "cluster": "Payments login timeouts", "tickets": "7", "link": "Release R-214" },
+    { "cluster": "Batch job failures", "tickets": "4", "link": "Vendor patch, W8" },
+    { "cluster": "VPN drops", "tickets": "3", "link": "No link found yet" }
+  ]
+}

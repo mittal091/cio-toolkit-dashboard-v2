@@ -1,0 +1,16 @@
+{
+  "kpi": "K24",
+  "domain": "security",
+  "asOf": "2026-10-12",
+  "values": {
+    "severity": { "high": 2, "medium": 3 }
+  },
+  "metrics": {
+    "overdue": { "label": "Audit findings overdue", "unit": "count",
+      "value": { "derive": "sumCounts", "values": "severity" }, "status": "bad" },
+    "high": { "label": "Overdue, high", "unit": "count",
+      "value": { "derive": "pick", "values": "severity", "key": "high" }, "status": "neutral" },
+    "medium": { "label": "Overdue, medium", "unit": "count",
+      "value": { "derive": "pick", "values": "severity", "key": "medium" }, "status": "neutral" }
+  }
+}

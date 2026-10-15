@@ -1,0 +1,24 @@
+{
+  "kpi": "K07",
+  "domain": "cost",
+  "asOf": "2026-10-12",
+  "series": {
+    "weekly": {
+      "name": "Cloud cost", "unit": "usd_k",
+      "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"],
+      "values": [182, 185, 181, 188, 186, 190, 187, 192, 265, 248, 214, 205]
+    }
+  },
+  "markers": [{ "series": "weekly", "index": 8, "text": "+{{K07:spikeW9}} anomaly" }],
+  "metrics": {
+    "spend12w": { "label": "Cloud spend, 12 weeks", "unit": "usd_m", "decimals": 2,
+      "value": { "derive": "sum", "series": "weekly", "scale": 0.001 }, "status": "neutral" },
+    "wasteShare": { "label": "Idle or over-provisioned", "unit": "pct", "value": 21, "status": "warn" },
+    "vsW8": { "label": "Cloud cost vs W8", "unit": "pct", "decimals": 0,
+      "value": { "derive": "pctChange", "series": "weekly", "from": 7, "to": 11 }, "status": "warn" },
+    "spikeW9": { "label": "Week 9 spike", "unit": "pct", "decimals": 0,
+      "value": { "derive": "pctChange", "series": "weekly", "from": 7, "to": 8 }, "status": "warn" },
+    "spikeAmt": { "label": "Week 9 increase", "unit": "usd_k",
+      "value": { "derive": "diff", "series": "weekly", "from": 7, "to": 8 }, "status": "warn" }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kpi": "K20",
+  "domain": "security",
+  "asOf": "2026-10-12",
+  "series": {
+    "criticalsOpenWeekly": {
+      "name": "Critical vulnerabilities", "unit": "count",
+      "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"],
+      "values": [22, 21, 23, 20, 19, 21, 18, 17, 20, 19, 18, 17]
+    }
+  },
+  "metrics": {
+    "criticalOpen": { "label": "Critical vulnerabilities open", "unit": "count",
+      "value": { "derive": "last", "series": "criticalsOpenWeekly" }, "status": "warn" },
+    "patchedInSla": { "label": "Patched within SLA", "unit": "pct", "decimals": 0, "value": 88, "status": "warn" }
+  }
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "cockpit", "name": "CIO cockpit", "roles": ["cio"],
+    "accessText": "CIO office, summary of all views",
+    "blocks": [
+      { "type": "tiles", "items": [
+        { "kpi": "K05", "metric": "itSpendPct" },
+        { "kpi": "K06", "metric": "budgetYtd", "sub": "Finance owns" },
+        { "kpi": "K16", "metric": "servicesMeetingSla", "sub": "Payments below target", "status": "bad" },
+        { "kpi": "K17", "metric": "incidentsW12", "sub": "MTTR {{K17:mttr:last}}, was {{K17:mttr:at(8)}} in W9", "status": "good" }
+      ] },
+      { "type": "table", "dataset": "attention",
+        "title": "Needs your attention this week",
+        "subtitle": "Five items, each with an owner and a first step" },
+      { "type": "table", "dataset": "one-event",
+        "title": "One event, seen by each role",
+        "subtitle": "Release R-214 in week 9. Click a role to open its view." },
+      { "type": "ask" }
+    ]
+  },
+  {
+    "id": "fin", "name": "Finance and FinOps", "roles": ["finance", "cio"],
+    "accessText": "Finance, FinOps, Procurement, CIO office",
+    "blocks": [
+      { "type": "tiles", "items": [
+        { "kpi": "K07", "metric": "spend12w" },
+        { "kpi": "K07", "metric": "wasteShare", "sub": "waste share" },
+        { "kpi": "K06", "metric": "budgetYtd", "label": "Budget vs actual, YTD", "sub": "{{K06:monthlyActual:sum}} vs {{K06:monthlyBudget:sum}}" },
+        { "kpi": "K09", "metric": "renewals" }
+      ] },
+      { "type": "row", "columns": 2, "blocks": [
+        { "type": "chart", "kind": "line", "kpi": "K07", "series": "weekly",
+          "title": "Weekly cloud spend ($k)", "subtitle": "K07 · daily data, weekly view",
+          "options": { "min": 150, "max": 300, "step": 50, "area": true, "marker": true, "color": "cyan", "aria": "Weekly cloud spend" } },
+        { "type": "table", "dataset": "cloud-drivers",
+          "title": "What the AI found",
+          "subtitle": "Week 9: {{K07:weekly:at(7)}} to {{K07:weekly:at(8)}}, +{{K07:spikeAmt}}",
+          "footnote": "Sources: billing export W9, change record CHG-3391. Ask the question below to see them." }
+      ] },
+      { "type": "table", "dataset": "renewals",
+        "title": "Contract renewals",
+        "subtitle": "K09 · AI reads the contract PDFs. Legal reviews before any action." },
+      { "type": "ask" }
+    ]
+  },
+  {
+    "id": "ops", "name": "Operations", "roles": ["ops", "cio"],
+    "accessText": "Operations, service owners, CIO office",
+    "blocks": [
+      { "type": "tiles", "items": [
+        { "kpi": "K16", "metric": "servicesMeetingSla", "sub": "target {{K16:target}}" },
+        { "kpi": "K17", "metric": "incidentsW12", "sub": "W9 peak was {{K17:incidents:at(8)}}", "status": "warn" },
+        { "kpi": "K17", "metric": "mttrW12", "sub": "was {{K17:mttr:at(8)}} in W9" },
+        { "kpi": "K17", "metric": "clusters" }
+      ] },
+      { "type": "row", "columns": 2, "blocks": [
+        { "type": "chart", "kind": "bar", "kpi": "K17", "series": "incidents",
+          "title": "P1/P2 incidents per week", "subtitle": "K17",
+          "options": { "min": 0, "max": 20, "step": 5, "color": "blue", "highlight": "markers", "highlightColor": "red", "aria": "Incidents per week" } },
+        { "type": "chart", "kind": "hbar", "dataset": "availability",
+          "title": "Availability by critical service",
+          "subtitle": "K16 · amber line is the {{K16:target}} target",
+          "options": { "max": 100, "base": 99.8, "unit": "pct", "decimals": 2, "target": { "kpi": "K16", "metric": "target" } } }
+      ] },
+      { "type": "table", "dataset": "repeat-incidents",
+        "title": "Repeat incidents",
+        "subtitle": "K17 · AI groups tickets by text and suggests a link. The problem manager confirms it." },
+      { "type": "ask" }
+    ]
+  },
+  {
+    "id": "del", "name": "Delivery and Engineering", "roles": ["delivery", "cio"],
+    "accessText": "PMO, Engineering leads, CIO office",
+    "blocks": [
+      { "type": "tiles", "items": [
+        { "kpi": "K03", "metric": "onTime" },
+        { "kpi": "K14", "metric": "ragCounts", "sub": "{{K14:total}} projects" },
+        { "kpi": "K14", "metric": "flagged", "label": "AI-flagged \"green but at risk\"", "sub": "PM to confirm" },
+        { "kpi": "K11", "metric": "deploysLastWeek", "sub": "direct metric" }
+      ] },
+      { "type": "table", "dataset": "project-health",
+        "title": "Green data, red narrative",
+        "subtitle": "K14 · AI compares what the status reports say with the reported colour" },
+      { "type": "ask" }
+    ]
+  },
+  {
+    "id": "sec", "name": "Security and Risk", "roles": ["security", "cio"],
+    "accessText": "Restricted: CISO, Risk and Compliance, CIO office",
+    "blocks": [
+      { "type": "note", "tone": "warn", "text": "Restricted view. The Ask panel answers only with the access of the person asking." },
+      { "type": "tiles", "items": [
+        { "kpi": "K20", "metric": "criticalOpen" },
+        { "kpi": "K20", "metric": "patchedInSla", "sub": "target 95%" },
+        { "kpi": "K21", "metric": "mfa" },
+        { "kpi": "K24", "metric": "overdue", "sub": "{{K24:high}} high, {{K24:medium}} medium" }
+      ] },
+      { "type": "table", "dataset": "patch-priority",
+        "title": "Patch priority",
+        "subtitle": "K20 · AI ranks by exploitability and asset criticality. The CISO decides." },
+      { "type": "ask" }
+    ]
+  },
+  {
+    "id": "ai", "name": "AI and Data", "roles": ["ai", "finance", "cio"],
+    "accessText": "AI and Data lead, FinOps, CIO office",
+    "blocks": [
+      { "type": "tiles", "items": [
+        { "kpi": "K31", "metric": "useCases", "sub": "{{K31:ideas}} ideas, {{K31:pilots}} pilots, {{K31:live}} live" },
+        { "kpi": "K32", "metric": "activeUsers", "sub": "{{K32:growth}} in 4 weeks" },
+        { "kpi": "K32", "metric": "measuredBenefit", "sub": "live use cases" },
+        { "kpi": "K35", "metric": "llmSpendWeek", "sub": "FinOps owns" }
+      ] },
+      { "type": "row", "columns": 2, "blocks": [
+        { "type": "chart", "kind": "line", "kpi": "K35", "series": "llmSpendWeekly",
+          "title": "Weekly AI / LLM spend ($k)", "subtitle": "K35 · anomaly and forecast",
+          "options": { "min": 10, "max": 50, "step": 10, "area": true, "color": "purple", "aria": "Weekly LLM spend" } },
+        { "type": "table", "dataset": "ai-notes",
+          "title": "What to know", "subtitle": "Usage-based pricing is volatile" }
+      ] },
+      { "type": "ask" }
+    ]
+  }
+]

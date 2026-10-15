@@ -1,0 +1,13 @@
+{
+  "id": "ai-notes",
+  "domain": "ai",
+  "columns": [
+    { "key": "item", "label": "Item" },
+    { "key": "value", "label": "Value" }
+  ],
+  "rows": [
+    { "item": "Last week", "value": "{{K35:llmSpendWeekly:last}}, highest in 12 weeks" },
+    { "item": "Month-end forecast", "value": "About $190k (indicative)" },
+    { "item": "Value evidence", "value": "{{K32:measuredBenefit}} live use cases measured" }
+  ]
+}

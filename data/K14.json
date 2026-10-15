@@ -1,0 +1,17 @@
+{
+  "kpi": "K14",
+  "domain": "delivery",
+  "asOf": "2026-10-12",
+  "values": {
+    "rag": { "green": 21, "amber": 6, "red": 3 }
+  },
+  "metrics": {
+    "ragCounts": { "label": "Projects Green / Amber / Red", "unit": "ratio_text",
+      "value": { "derive": "ratioText", "values": "rag", "order": ["green", "amber", "red"] }, "status": "neutral" },
+    "total": { "label": "Projects in portfolio", "unit": "count",
+      "value": { "derive": "sumCounts", "values": "rag" }, "status": "neutral" },
+    "flagged": { "label": "AI-flagged \"green but at risk\"", "unit": "count",
+      "value": { "derive": "countWhere", "dataset": "project-health", "key": "flagged", "op": "eq", "value": true },
+      "status": "warn" }
+  }
+}

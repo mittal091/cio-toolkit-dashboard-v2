@@ -1,0 +1,8 @@
+{
+  "kpi": "K09",
+  "domain": "cost",
+  "asOf": "2026-10-12",
+  "metrics": {
+    "renewals": { "label": "Renewals due (6-12 months)", "unit": "text", "value": "23 · $18.4M", "status": "neutral" }
+  }
+}

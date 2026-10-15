@@ -1,0 +1,16 @@
+{
+  "kpi": "K03",
+  "domain": "delivery",
+  "asOf": "2026-10-12",
+  "series": {
+    "onTimeMonthly": {
+      "name": "On time", "unit": "pct", "decimals": 0,
+      "labels": ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      "values": [86, 85, 84, 83, 80, 82]
+    }
+  },
+  "metrics": {
+    "onTime": { "label": "Roadmap delivered on time", "unit": "pct", "decimals": 0,
+      "value": { "derive": "last", "series": "onTimeMonthly" }, "status": "neutral" }
+  }
+}

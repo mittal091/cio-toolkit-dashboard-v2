@@ -1,0 +1,9 @@
+{
+  "name": "cio-toolkit-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/check.mjs && node tests/parity.mjs",
+    "serve": "npx serve ."
+  }
+}

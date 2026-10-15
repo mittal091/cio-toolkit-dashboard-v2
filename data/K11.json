@@ -1,0 +1,16 @@
+{
+  "kpi": "K11",
+  "domain": "delivery",
+  "asOf": "2026-10-12",
+  "series": {
+    "deploysWeekly": {
+      "name": "Deployments", "unit": "count",
+      "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"],
+      "values": [38, 41, 36, 44, 40, 43, 39, 45, 31, 37, 41, 46]
+    }
+  },
+  "metrics": {
+    "deploysLastWeek": { "label": "Deployments, last week", "unit": "count",
+      "value": { "derive": "last", "series": "deploysWeekly" }, "status": "good" }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Change record CHG-3391": "R-214 deployed to Payments API in W9. Scaling rule changed from 4 to 12 nodes.",
+  "Billing export W9": "Payments API compute: $118k against $57k expected. Data lake storage: $31k against $19k expected.",
+  "ITSM tickets W9 (19)": "19 P1/P2 incidents in W9. 12 on Payments services. 5 titled \"login timeout after redirect\".",
+  "Release note R-214": "R-214, W9: Payments login service v4.2 with new session handling.",
+  "Observability contract, p.14": "\"...either party must give written notice by 15 Nov 2026 ahead of the 15 Feb 2027 renewal. Fees increase by 7% on renewal...\"",
+  "ERP licence agreement, p.22": "\"...renews on 31 Mar 2027 unless notice is received by 20 Dec 2026. Fees increase by 9% on renewal...\"",
+  "PPM status reports, last 3 cycles": "Cycle 1: \"test environment delayed\". Cycle 2: \"vendor delivery slipped one sprint\". Cycle 3: \"go-live date under review\". Reported RAG: Green in all three.",
+  "GRC tool export": "5 overdue findings: access review (3), backup testing (2). Oldest open 118 days.",
+  "Scanner export (K20)": "Payments gateway: exploitable critical, patch due 28 Sep, not applied. Identity server: exploitable critical, due in 4 days.",
+  "Usage logs": "Active AI users: 1,240 in the last 28 days, against 1,137 four weeks earlier."
+}
